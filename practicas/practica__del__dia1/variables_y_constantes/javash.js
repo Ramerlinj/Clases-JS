@@ -6,15 +6,14 @@ let information ={
 console.log (`${information.nombre}`)
 
 const Name = "rosanna";
-// let Edad = "22";
-var Ciudad = "newyork";
+let Edad = 22;
+let Ciudad = "newyork";
 
-let Edadverdadera = "32";
+Edad = 32; //esto es reasignar
 
 console.log (Name);
-console.log (Edadverdadera);
+console.log (Edad);
 console.log (Ciudad);
-
 
 // nombre puede ser const por que este es un identificador unico de una persona en especial
 
