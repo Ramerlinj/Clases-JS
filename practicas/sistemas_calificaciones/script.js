@@ -14,12 +14,13 @@ switch (true) {
         document.write("aprobado")
         break;
 
-    case (calificaciones <= 70 ):
+    case (calificaciones <= 70 && calificaciones > 0 ):
         document.write ("reprobado")
         break;
 
-        case (calificaciones = 0 && calificaciones >= 100 ):
+        case (calificaciones == 0 || calificaciones >= 100 ):
             document.write ("calificacion invalida")
+            break
 
         default:
         document.write("calificaciones no validas");

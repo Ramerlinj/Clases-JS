@@ -15,7 +15,7 @@ switch (cuenta) {
 
 document.write("</br></br>")
 
-const edad = 12;
+const edad = 18;
 
 if (edad >=18) {
     document.write("Edad permitida")
@@ -29,12 +29,12 @@ else{
 
 document.write ("</br></br></br>")
 let estasAutentico1 = 12;
-let estasAutentico2 = 12;
+let estasAutentico2 = 13;
 
 if (estasAutentico1 === estasAutentico2) {
     document.write("Cuenta verificada y aceso permitido")
 }
-else if(estasAutentico1 == estasAutentico2){
+else if(estasAutentico1 != estasAutentico2){
     document.write("no acceso inmedianto")
 }
 
