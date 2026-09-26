@@ -10,6 +10,8 @@ let numero2 = "10";
 
 let suma = numero1 + numero2;
 let resta = numero1 - numero2;
+suma += 5;
+resta -= 3;
 let multiplicacion = numero1 * numero2;
 let division = numero1 / numero2;
 let modulo = 14 % 4; //sobrante de una division
