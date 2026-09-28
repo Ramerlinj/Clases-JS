@@ -48,14 +48,17 @@ switch (paquete) {
         alert(`Ha seleccionado el paquete ${serviciosLavados.basico.nombre} con un precio de ${serviciosLavados.basico.precio}`);
         subtotal = serviciosLavados.basico.precio;
         break;
+
     case serviciosLavados.intermedio.nombre:
         alert(`Ha seleccionado el paquete ${serviciosLavados.intermedio.nombre} con un precio de ${serviciosLavados.intermedio.precio}`);
         subtotal = serviciosLavados.intermedio.precio;
         break;
+
     case serviciosLavados.premium.nombre:
         alert(`Ha seleccionado el paquete ${serviciosLavados.premium.nombre} con un precio de ${serviciosLavados.premium.precio}`);
         subtotal = serviciosLavados.premium.precio;
         break;
+        
     default:
         alert("Opción no válida. Por favor, seleccione un paquete válido.");
         ordenValida = false;
