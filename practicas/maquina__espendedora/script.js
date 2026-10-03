@@ -57,5 +57,5 @@ if (cUpones === "rosanna") {
     alert(`usted tiene un 10% de descuento, su total a pagar es: ${preciomasproducto - descuento}`)
 }
 else{
-    alert(`cupon incorrecto toatal a pagar ${preciomasproducto}`)
+    alert(`cupon incorrecto total a pagar ${preciomasproducto}`)
 }
