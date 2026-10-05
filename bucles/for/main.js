@@ -23,14 +23,18 @@ for (let i =1; i <= 5;i++){
 
 // for of
 
-const frutas = ['manzana', "pera", 'Mango', 'KIWI', "Fresa"]
+const frutas = ['manzana',
+     "pera",
+      'Mango',
+       'KIWI',
+        "Fresa"]
 
-for(const f of frutas){
-    document.write(f + "<br/>")
-    if(f == "pera"){
+for(const x of frutas){
+    document.write(x + "<br/>")
+    if(x == "pera"){
         document.write("La pera no me gusta nada <br/>")
     }
-    else if(f == "manzana"){
+    else if(x == "manzana"){
         document.write("la manzana no me gusta nada <br/>")
     }
 
