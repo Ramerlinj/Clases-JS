@@ -132,9 +132,3 @@ while(montoPago == false || montoPago < totalcostoHoras) {
 let cambio = montoPago - totalcostoHoras;
 alert(`Pago exitoso. Total a pagar: ${totalcostoHoras}, Monto ingresado: ${montoPago}, Cambio a devolver: ${cambio}`);
 
-
-// Cobro y Validación:
-// Ingresa el monto con el que pagará.
-// Si el dinero es suficiente, muestra el desglose del total y el cambio a devolver.
-// Si el dinero no alcanza, indica cuánto dinero le falta para completar la cuenta.
-// En caso de que cualquier entrada sea inválida o negativa, el flujo debe detenerse sin procesar las fases posteriores.
