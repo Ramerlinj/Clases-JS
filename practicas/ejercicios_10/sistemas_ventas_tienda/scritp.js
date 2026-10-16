@@ -1,18 +1,18 @@
 const productos = [
 
    {
-        paraPelo: "shamppo",
+        tipo: "shamppo",
         precio: 300,
         cantidad: 20
         
     },
     {
-        paraPelo: "acondicionador",
+        tipo: "acondicionador",
         precio: 500,
         cantidad: 100
     },
     {
-        paraPelo: "acondicionador",
+        tipo: "acondicionador",
         precio: 700,
         cantidad: 30
     }
@@ -39,7 +39,6 @@ console.log(`Esta fue la cantidad${cantidadTotal}`);
 
 let ingresoPromedio = cantidadTotal * unidadesTotal;
 console.log(`Este fue el ingreso promedio${ingresoPromedio}`);
-
 
 
 const estados = ingresoPromedio>= 50000? "Excelente jornada de ventas" : "Debemos mejorar las ventas"; console.log(estados)
