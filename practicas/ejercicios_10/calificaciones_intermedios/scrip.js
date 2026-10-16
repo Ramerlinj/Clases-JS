@@ -50,7 +50,6 @@ const sumaTotal = estudiante.materias.reduce((acumulador,m) => {return acumulado
 const promedio = Number(sumaTotal / estudiante.materias.length);
 console.log(`promedio ${promedio}`)
 
-
 const estado = promedio>= 70? "aprobado" : "reprobado"; console.log(`${estado}`)
 
 console.log(`marias excelentes son: ${contador}`)
