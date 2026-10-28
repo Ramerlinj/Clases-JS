@@ -23,14 +23,14 @@ console.log(buscaProductosDisponibles)  //encontrar un producto utitlizando find
 
 let guardarPedidos = [];
 let deseaSalir;
-let descuento;
 let cantidad = 0;
 let calculoPedido = 0;
+let disponibilidad = false;
 
 do {
     const pedido = prompt(menu.map(menu => `Menu: ${menu.nombre} precio disponible ${menu.precios} disponibilidad de producto ${menu.disponibilidad}`))
 
-    switch (pedido.toLowerCase()) {
+    switch (pedido) {
         case "pizzas":
             alert(`Elegiste pizza`)
             const producto = menu.find(menu => menu.nombre == "pizza")
@@ -47,10 +47,10 @@ do {
             }
             guardarPedidos.push({
                 Nombre: producto.nombre,
-                cantidad: producto.cantidad,
-                calculo: producto.calculoPedido
+                cantidad: cantidad,
+                calculo: calculoPedido
             })
-
+            disponibilidad = true
             break;
         case "leche":
             alert(`Elegiste leche`)
@@ -70,9 +70,11 @@ do {
             }
             guardarPedidos.push({
                 Nombre: segundoProducto.nombre,
-                cantidad: segundoProducto.cantidad,
-                calculo: segundoProducto.calculoPedido
+                cantidad: cantidad,
+                calculo: calculoPedido
             })
+            disponibilidad = true
+
             break;
 
 
@@ -90,17 +92,20 @@ do {
                 }
                 guardarPedidos.push({
                     Nombre: tercerProducto.nombre,
-                    cantidad: tercerProducto.cantidad,
-                    calculo: tercerProducto.calculoPedido
+                    cantidad: cantidad,
+                    calculo: calculoPedido
                 })
+                disponibilidad = true
+
                 break;
             }
         default: alert(`Este producto no existe elija otro que este en nuestra lista de pedidos`)
 
     }
-
-    let resultados = guardarPedidos.map(p => `${p.Nombre}, ${p.cantidad}`)
-    alert(resultados)
+    if (disponibilidad) {
+        let resultados = guardarPedidos.map(p => `${p.Nombre}, y cantidad: ${p.cantidad} y total : ${p.calculo}`)
+        alert(resultados)
+    }
     deseaSalir = prompt("Desea salir? yes/no")
 
 
@@ -111,6 +116,16 @@ do {
 
 
 } while (deseaSalir === "no")
+
+if (guardarPedidos.length !== 0) {
+
+    let totalGlobal = guardarPedidos.map(p => p.calculo)
+    .reduce((ant, dep) => ant + dep, 0); //investigar que hace el reduce
+    let garantia = totalGlobal => 5000 ? totalGlobal * 0.10 : 0
+    let total = totalGlobal - garantia;
+
+    alert(`Su total es: ${total}`)
+}
 
 
 
